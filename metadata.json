@@ -1,0 +1,6 @@
+{
+  "name": "Smart Consumer Protection",
+  "description": "Smart Consumer Protection and Online Scam Awareness Platform — check suspicious messages, inspect website URLs, learn common fraud patterns, test your awareness, and access official Indian cybercrime reporting resources.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

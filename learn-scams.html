@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scam Awareness Library — Smart Consumer Protection</title>
+    <meta
+      name="description"
+      content="Learn to recognise 8 common types of online scams with simple explanations, realistic examples, and prevention tips."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand-link">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+          <span>Smart Consumer Protection</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="scam-checker.html" class="nav-link">Scam Checker</a>
+          <a href="url-checker.html" class="nav-link">URL Checker</a>
+          <a href="learn-scams.html" class="nav-link is-active">Learn About Scams</a>
+          <a href="quiz.html" class="nav-link">Awareness Quiz</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="emergency-help.html" class="nav-cta">Emergency Help</a>
+          <button type="button" id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobileNav" class="mobile-nav" aria-label="Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="scam-checker.html" class="mobile-nav-link">Scam Checker</a></li>
+          <li><a href="url-checker.html" class="mobile-nav-link">URL Checker</a></li>
+          <li><a href="learn-scams.html" class="mobile-nav-link is-active">Learn About Scams</a></li>
+          <li><a href="quiz.html" class="mobile-nav-link">Awareness Quiz</a></li>
+          <li><a href="safety-tips.html" class="mobile-nav-link">Safety Tips</a></li>
+          <li><a href="emergency-help.html" class="mobile-nav-link">Emergency Help (1930)</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span>Scam Awareness Library</span>
+          </div>
+          <h1 class="page-title">Learn to Recognise Online Scams</h1>
+          <p class="page-desc">
+            Understand how common online frauds work in plain, simple language—with warning signs, realistic examples, and practical prevention tips.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div id="scamFilterBar" class="filter-bar" role="group" aria-label="Filter scam categories">
+            <button type="button" class="filter-btn is-active" data-category="all">All Scams (8)</button>
+            <button type="button" class="filter-btn" data-category="financial">Financial &amp; Payment</button>
+            <button type="button" class="filter-btn" data-category="identity">Links &amp; Identity</button>
+            <button type="button" class="filter-btn" data-category="jobs-shopping">Shopping &amp; Offers</button>
+          </div>
+
+          <div id="scamLibraryGrid" class="scam-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Accessible Detail Modal -->
+    <div id="scamDetailModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="scamModalTitle" hidden>
+      <div class="modal-panel">
+        <div class="modal-header">
+          <h2 id="scamModalTitle">Scam Details</h2>
+          <button type="button" id="closeScamModal" class="modal-close" aria-label="Close scam details">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div id="scamModalBody"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">Smart Consumer Protection</div>
+            <p>
+              Educational awareness library covering common online scam techniques in everyday language.
+            </p>
+          </div>
+          <div>
+            <h3 class="footer-heading">Tools</h3>
+            <ul class="footer-links">
+              <li><a href="scam-checker.html">Scam Message Checker</a></li>
+              <li><a href="url-checker.html">Website URL Checker</a></li>
+              <li><a href="quiz.html">Cyber Safety Quiz</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-heading">Learn &amp; Information</h3>
+            <ul class="footer-links">
+              <li><a href="learn-scams.html">Scam Awareness Library</a></li>
+              <li><a href="safety-tips.html">Safety Tips</a></li>
+              <li><a href="index.html#about-platform">About</a></li>
+              <li><a href="index.html#privacy-promise">Privacy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-heading">Help &amp; Contact</h3>
+            <ul class="footer-links">
+              <li><a href="emergency-help.html">Emergency Help</a></li>
+              <li><a href="index.html#contact-support">Contact</a></li>
+              <li><a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Smart Consumer Protection. Educational awareness resource.</span>
+          <span>India Cyber Financial Fraud Helpline: 1930</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
